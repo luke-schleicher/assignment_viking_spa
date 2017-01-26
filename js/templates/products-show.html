@@ -12,7 +12,7 @@
     <p>{{ product.description }}</p>
 
     <p>{{ product.quantity }} Available</p>
-    <form ng-submit="addToCart(product, quantity)">
+    <form ng-submit="changeQuantity(product, quantity)">
       <input type="number" ng-min="0" ng-max="product.quantity" ng-model="quantity">
       <input type="submit" class="btn btn-success" value="Add to Cart">
     </form>

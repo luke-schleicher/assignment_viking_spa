@@ -26,3 +26,12 @@ CATEGORIES
   }
 
 CARTS
+
+{
+  <productReference>: 0,
+  <productReference>: 3
+}
+
+{
+  productReference: quantity,
+}
