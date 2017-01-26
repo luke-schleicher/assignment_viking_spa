@@ -1,0 +1,27 @@
+PRODUCTS
+
+  {
+    "1": {
+      "id": 1,
+      "name": "big axe",
+      "price": 5,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.",
+      "category": 3
+    }
+  }
+
+CATEGORIES
+
+  {
+    "1": {
+      "id": 1,
+      "name": "axes",
+      "products": {
+        "1": true,
+        "3": true
+      }
+    }
+  }
+
+CARTS
