@@ -25,6 +25,7 @@ VikingStore.factory("productService", [
       var product = {
         id: id,
         name: faker.commerce.productName(),
+        imagePath: "http://placehold.it/264x175",
         price: faker.commerce.price(),
         description: faker.name.jobDescriptor(),
         category: 0 // TODO dynamic when categories are created

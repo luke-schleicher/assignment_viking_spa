@@ -3,7 +3,7 @@
   <section class="products">
 
     <!-- TODO (key, value) -->
-    <product ng-repeat="product in products" product="product"></product>
+    <product-tile ng-repeat="(key, product) in products" product="product"></product-tile>
 
     <div class="pagination-nav">
       <p><a class="prev"><< Prev</a><a>1</a><a>2</a><a>3</a><a>...</a><a>8</a><a>9</a><a class="next">Next >></a></p>

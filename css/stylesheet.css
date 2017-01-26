@@ -47,11 +47,11 @@ header .shopping-cart h3 {
 .products {text-align: center;padding: 20px 0;}
 .product {width: 31%;margin: 0 5px 10px 5px;display: inline-block;border: 2px solid #333;}
 .product-title {background: #333;padding: 15px 10px;}
-.product-title h3 { color: #fff; font-weight: bold; font-size: 22px;}
+.product-title h3 { color: #fff; font-weight: bold; font-size: 19px; -webkit-font-smoothing: antialiased;}
 .product-image {position: relative;padding: 10px;}
 .product-image img {max-width: 100%;max-height: 180px;}
-.product-image .price {top: -2px;right: -2px;position: absolute; border: 2px solid #333;}
-.product-image .price p { color: #555; padding: 5px 10px; font-size: 16px; }
+.product-image .price {top: -2px;right: -2px;position: absolute; border: 2px solid #333; background: #444;}
+.product-image .price p { color: #fff; padding: 5px 10px; font-size: 16px; }
 .product-button {background: #333;padding: 15px 10px;}
 .product-button p { }
 .product-button a {background: #F6B26B;color: #333;padding: 10px 15px;display: inline-block; cursor: pointer; -webkit-transition: transform 0.3s; transition: transform 0.3s;}
