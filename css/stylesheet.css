@@ -49,9 +49,11 @@ header .shopping-cart h3 {
 .instructions { text-align: center; padding: 20px 0; border-bottom: 1px solid #777;}
 .instructions p { font-style: italic; color: #777; font-size:21px; }
 
+.flash { position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index: 100000;}
+
 .products {text-align: center;padding: 20px 0;}
 .product {width: 31%;margin: 0 5px 10px 5px;display: inline-block;border: 2px solid #333;}
-.product-title {background: #333;padding: 15px 10px;}
+.product-title { background: #333;padding: 15px 10px; }
 .product-title h3 { color: #fff; font-weight: bold; font-size: 19px; -webkit-font-smoothing: antialiased;}
 .product-image {position: relative;padding: 10px;}
 .product-image img {max-width: 100%;max-height: 180px;}
@@ -75,4 +77,3 @@ footer img {max-width: 15px;ma;max-height: 15px;width: auto;height: auto;}
 footer .contact-info {margin-bottom: 5px;text-align: left;margin: 0 auto 7px;width: 160px;}
 footer .contact-info img { display: inline-block; vertical-align: middle; }
 footer .contact-info a {display: inline-block;vertical-align: middle;font-size: 12px;margin-left: 5px;}
-
