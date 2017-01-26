@@ -6,12 +6,10 @@ VikingStore.controller("ProductsShowCtrl",
 
     $scope.product = productService.find($stateParams.id);
 
-    $scope.changeQuantity = function changeQuantity(product, quantity){
-      cartService.changeQuantity(product, quantity);
-      $state.go('cart');
+    $scope.addQuantity = function addQuantity(product, quantity){
+      cartService.addQuantity(product, quantity);
+      $state.go("cart");
     };
-
-
 
   }
 
