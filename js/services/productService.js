@@ -3,6 +3,7 @@ VikingStore.factory("productService", ["categoryService",
 
   function(categoryService){
 
+    var _id = 1;
     var products = {};
 
     var all = function all(){
@@ -10,27 +11,39 @@ VikingStore.factory("productService", ["categoryService",
     };
 
     var _init = function _init(){
-      _createProducts(18);
+      var categories = categoryService.all();
+      _createProductsPerCategory(6, categories);
     };
 
-    var _createProducts = function _createProducts(n){
+    var _createProductsPerCategory = function _createProductsPerCategory(n, categories){
       var newProducts = {};
-      for (var i = 0; i < n; i++){
-        newProducts[i] = _createProduct(i);
-      }
+      var id, category;
+      for(var cId in categories){
+        category = categories[cId];
+        for (var i = 0; i < n; i++){
+          id = _nextId();
+          newProducts[id] = _createProduct(id, category);
+        }
+      };
       angular.copy(newProducts, products);
     };
 
-    var _createProduct = function _createProduct(id){
+    var _createProduct = function _createProduct(id, category){
       var product = {
         id: id,
         name: faker.commerce.productName(),
         imagePath: "http://placehold.it/264x175",
         price: faker.commerce.price(),
         description: faker.name.jobDescriptor(),
-        category: 0 // TODO dynamic when categories are created
+        category: category.id
       }
+      category.addProduct(product);
+      _id++;
       return product;
+    };
+
+    var _nextId = function _nextId(){
+      return _id + 1;
     };
 
     _init();

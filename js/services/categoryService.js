@@ -1,4 +1,6 @@
-VikingStore.factory('categoryService', [function() {
+
+VikingStore.factory("categoryService",
+  [function() {
 
     var categories = {};
 
@@ -6,12 +8,18 @@ VikingStore.factory('categoryService', [function() {
       return categories;
     };
 
+    var _extend = function _extend(category){
+      category.addProduct = function addProduct(product){
+        category.products[product.id] = true;
+      }
+    };
+
     var _init = function _init(){
       _createCategories(3);
     };
 
     var _createCategories = function _createCategories(n){
-      var newcategories = {};
+      var newCategories = {};
       for (var i = 0; i < n; i++){
         newCategories[i] = _createCategory(i);
       }
@@ -21,11 +29,10 @@ VikingStore.factory('categoryService', [function() {
     var _createCategory = function _createCategory(id){
       var category = {
         id: id,
-        name: faker.catchPhraseNoun,
-        products: {
-          
-        }
+        name: faker.company.catchPhraseNoun(),
+        products: {}
       }
+      _extend(category);
       return category;
     };
 
@@ -34,4 +41,5 @@ VikingStore.factory('categoryService', [function() {
       all: all
     };
 
-}]);
+  }
+]);
