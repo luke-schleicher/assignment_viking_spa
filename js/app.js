@@ -1,15 +1,15 @@
 
-var VikingStore = angular.module('VikingStore', ['ui.router']);
+var VikingStore = angular.module("VikingStore", ["ui.router"]);
 
 VikingStore.config(function($urlRouterProvider, $stateProvider) {
 
-  $urlRouterProvider.otherwise("/");
+  $urlRouterProvider.otherwise("/products");
 
   $stateProvider
-    .state("home", {
-      url: "/",
-      templateUrl: "js/templates/home.html",
-      controller: "HomeCtrl"
+    .state("products", {
+      url: "/products",
+      templateUrl: "js/templates/products.html",
+      controller: "ProductsCtrl"
     });
 
 });

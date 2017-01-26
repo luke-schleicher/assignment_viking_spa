@@ -1,5 +1,5 @@
 
-VikingStore.controller("HomeCtrl",
+VikingStore.controller("ProductsCtrl",
 
   ["$scope", "productService",
 
