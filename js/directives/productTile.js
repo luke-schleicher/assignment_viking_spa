@@ -5,7 +5,8 @@ VikingStore.directive("productTile", function(){
     templateUrl: "js/directives/productTile.html",
     restrict: "E",
     scope: {
-      product: "="
+      product: "=",
+      incrementQuantity: "&"
     }
   };
 

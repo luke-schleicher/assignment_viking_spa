@@ -4,9 +4,14 @@ VikingStore.factory("cartService", [
 
     var cart = {};
 
+    var incrementQuantity = function incrementQuantity(product){
+      addQuantity(product);
+    };
+
     var addQuantity = function addQuantity(product, quantity) {
       quantity = quantity || 1;
-      cart[product] += quantity;
+      if(!cart[product.id]) cart[product.id] = 0;
+      cart[product.id] += quantity;
     };
 
     var getCart = function getCart() {
@@ -14,12 +19,12 @@ VikingStore.factory("cartService", [
     }
 
     var removeItem = function removeItem(product) {
-      delete cart[product];
+      delete cart[product.id];
     };
-
 
     return {
       addQuantity: addQuantity,
+      incrementQuantity: incrementQuantity,
       getCart: getCart,
       removeItem: removeItem
     };
