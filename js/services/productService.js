@@ -39,7 +39,8 @@ VikingStore.factory("productService", ["categoryService",
         imagePath: "http://placehold.it/264x175",
         price: faker.commerce.price(),
         description: faker.hacker.phrase(),
-        category: category.id
+        category: category.id,
+        quantity: (Math.floor(Math.random * 20))
       }
       category.addProduct(product);
       _id++;

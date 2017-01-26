@@ -6,6 +6,7 @@ VikingStore.controller("CartShowCtrl",
 
     $scope.cart = cartService.getCart();
     $scope.products = cartService.getProducts();
+
     $scope.total = function(){
       var total = 0;
       for (var productId in $scope.cart) {

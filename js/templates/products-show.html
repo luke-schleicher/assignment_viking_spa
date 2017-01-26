@@ -11,6 +11,7 @@
     <h2>Description</h2>
     <p>{{ product.description }}</p>
 
+    {{ Quantity + product.quantity }}
     <p ng-if="!product.quantity">Out of Stock</p>
 
     <form ng-if="product.quantity" ng-submit="addQuantity(product, quantity)">
