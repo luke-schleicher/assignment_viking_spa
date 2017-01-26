@@ -1,5 +1,5 @@
 
-VikingStore.controller("ProductsCtrl",
+VikingStore.controller("ProductsIndexCtrl",
 
   ["$scope", "productService", "categoryService",
 
@@ -7,8 +7,6 @@ VikingStore.controller("ProductsCtrl",
 
       $scope.products = productService.all();
       $scope.categories = categoryService.all();
-
-      
 
     }
 

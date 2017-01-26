@@ -13,8 +13,8 @@ VikingStore.config(function($urlRouterProvider, $stateProvider) {
     })
     .state("products.index", {
       url: "",
-      templateUrl: "js/templates/products.html",
-      controller: "ProductsCtrl"
+      templateUrl: "js/templates/products-index.html",
+      controller: "ProductsIndexCtrl"
     });
 
 });
