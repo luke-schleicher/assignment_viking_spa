@@ -1,0 +1,1 @@
+var VikingStore = angular.module('VikingStore',['ui.router']);
