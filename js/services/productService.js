@@ -1,7 +1,7 @@
 
-VikingStore.factory("productService", [
+VikingStore.factory("productService", ["categoryService",
 
-  function(){
+  function(categoryService){
 
     var products = {};
 
