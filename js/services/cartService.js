@@ -23,7 +23,7 @@ VikingStore.factory("cartService", ["productService",
       for (var productId in cart) {
         var product = productService.find(productId);
         products.push(product);
-      } 
+      }
       return products;
     };
 

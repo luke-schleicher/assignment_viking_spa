@@ -2,17 +2,17 @@
     <tr>
       <th>Product</th>
       <th>Quantity</th>
-      <th>Price</th>
+      <th>Price / Item</th>
     </tr>
     <tr ng-repeat="product in products">
       <td>{{ product.name }}</td>
       <td>{{ cart[product.id] }}</td>
-      <td>{{ product.price }}</td>
+      <td>{{ product.price | currency }}</td>
     </tr>
     <tr>
       <td><b>Total</b></td>
       <td></td>
-      <td></td>
+      <td>{{ total(cart) | currency }}</td>
 </table>
 
-<button class="btn btn-success">Place Order</button>
+<button class="btn btn-success pull-right">Place Order</button>
