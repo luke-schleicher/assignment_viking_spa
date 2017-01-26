@@ -1,1 +1,18 @@
-{{ cart }}
+<table class="table table-striped">
+    <tr>
+      <th>Product</th>
+      <th>Quantity</th>
+      <th>Price</th>
+    </tr>
+    <tr ng-repeat="product in products">
+      <td>{{ product.name }}</td>
+      <td>{{ cart[product.id] }}</td>
+      <td>{{ product.price }}</td>
+    </tr>
+    <tr>
+      <td><b>Total</b></td>
+      <td></td>
+      <td></td>
+</table>
+
+<button class="btn btn-success">Place Order</button>

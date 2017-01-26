@@ -3,5 +3,8 @@ VikingStore.controller('CartShowCtrl', ['$scope', 'cartService',
 
     $scope.cart = cartService.getCart();
 
+    $scope.products = cartService.getProducts();
+
+    console.log($scope.cart);
   }
 ]);
