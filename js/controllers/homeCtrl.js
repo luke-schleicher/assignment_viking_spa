@@ -1,10 +1,13 @@
 
 VikingStore.controller("HomeCtrl",
 
-  ["$scope",
+  ["$scope", "productService",
 
-    function($scope){
+    function($scope, productService){
       // TODO
+
+      productService.all();
+
     }
 
 ]);
