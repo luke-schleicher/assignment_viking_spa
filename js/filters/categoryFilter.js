@@ -2,7 +2,9 @@ VikingStore.filter('categoryFilter', function() {
 
   return function(products, categoryId) {
 
-    if (!categoryId) { return products }
+    if (!categoryId || categoryId === "all") {
+      return products
+    }
 
     var returnedProducts = {};
 

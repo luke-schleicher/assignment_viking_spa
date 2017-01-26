@@ -2,6 +2,7 @@
 
   <form class="form-inline">
     <select ng-model="categoryChoice" class="form-control">
+      <option value="all">All</option>
       <option ng-repeat="(id, category) in categories" value="{{ id }}">
         {{ category.name }}
       </option>
