@@ -1,7 +1,16 @@
-<div ng-controller="HomeCtrl">
+<div>
+
+  <form class="form-inline">
+    <select ng-model="categoryChoice" class="form-control">
+      <option ng-repeat="(id, category) in categories" value="{{ id }}">
+        {{ category.name }}
+      </option>
+    </select>
+  </form>
+
   <section class="products">
 
-    <product-tile ng-repeat="(key, product) in products" product="product"></product-tile>
+    <product-tile ng-repeat="(key, product) in products | categoryFilter:categoryChoice" product="product"></product-tile>
 
     <div class="pagination-nav">
       <p><a class="prev"><< Prev</a><a>1</a><a>2</a><a>3</a><a>...</a><a>8</a><a>9</a><a class="next">Next >></a></p>
