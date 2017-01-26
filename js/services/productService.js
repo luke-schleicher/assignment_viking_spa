@@ -1,21 +1,42 @@
 
-VikingStore.factory("productService", ["faker",
+VikingStore.factory("productService", [
 
-  function(faker){
+  function(){
 
-
+    var products = {};
 
     var all = function all(){
-    console.log('running');
-    console.log(faker.fake("{{name.lastName}}, {{name.firstName}} {{name.suffix}}"));
-
-    console.log(faker.internet.email());
+      return products;
     };
 
+    var _init = function _init(){
+      _createProducts(18);
+    };
+
+    var _createProducts = function _createProducts(n){
+      var newProducts = {};
+      for (var i = 0; i < n; i++){
+        newProducts[i] = _createProduct(i);
+      }
+      angular.copy(newProducts, products);
+    };
+
+    var _createProduct = function _createProduct(id){
+      var product = {
+        id: id,
+        name: faker.commerce.productName(),
+        price: faker.commerce.price(),
+        description: faker.name.jobDescriptor(),
+        category: 0 // TODO dynamic when categories are created
+      }
+      return product;
+    };
+
+    _init();
     return {
       all: all
     };
 
-  }]
+  }
 
-);
+]);

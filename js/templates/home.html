@@ -1,5 +1,12 @@
 
 <div ng-controller="HomeCtrl">
-  <div class="row">
-  </div>
+  <section class="products">
+
+    <!-- TODO (key, value) -->
+    <product ng-repeat="product in products" product="product"></product>
+
+    <div class="pagination-nav">
+      <p><a class="prev"><< Prev</a><a>1</a><a>2</a><a>3</a><a>...</a><a>8</a><a>9</a><a class="next">Next >></a></p>
+    </div>
+  </section>
 </div>

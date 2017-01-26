@@ -31,11 +31,12 @@ header .shopping-cart h3 {
     margin-left: 10px;
 }
 
-.hero-image { position: relative; }
+.hero-image {
+  position: relative;
+  text-align: center;
+}
 
-.hero-image img { max-width: 100%;}
-
-.hero-image p { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-size: 45px; font-weight: bold; background: rgba(255,255,255,0.9); padding: 15px 25px; border: 2px solid white;}
+.hero-image h1 { font-size: 45px; font-weight: bold; background: rgba(255,255,255,0.9); padding: 15px 25px; border: 2px solid white;}
 
 .hero-text { text-align: center; background: #333; padding: 35px 0;}
 .hero-text p { color: #fff; font-size: 32px; }
