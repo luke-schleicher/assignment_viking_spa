@@ -10,6 +10,10 @@ VikingStore.factory("productService", ["categoryService",
       return products;
     };
 
+    var find = function find(productId){
+      return products[productId];
+    };
+
     var _init = function _init(){
       var categories = categoryService.all();
       _createProductsPerCategory(6, categories);
@@ -34,7 +38,7 @@ VikingStore.factory("productService", ["categoryService",
         name: faker.commerce.productName(),
         imagePath: "http://placehold.it/264x175",
         price: faker.commerce.price(),
-        description: faker.name.jobDescriptor(),
+        description: faker.hacker.phrase(),
         category: category.id
       }
       category.addProduct(product);
@@ -48,7 +52,8 @@ VikingStore.factory("productService", ["categoryService",
 
     _init();
     return {
-      all: all
+      all: all,
+      find: find
     };
 
   }

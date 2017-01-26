@@ -1,0 +1,16 @@
+
+<div class="row margin-below">
+
+  <div class="col-md-7">
+    <h1>{{ product.name }}</h1>
+    <h3>{{ product.price | currency }}</h3>
+    <img ng-src="http://placehold.it/500x500">
+  </div>
+
+  <div class="col-md-5">
+    <h2>Description</h2>
+    <p>{{ product.description }}</p>
+    <button class="btn btn-success" ng-click="addToCart(product)">Add to Cart</button>
+  </div>
+
+</div>

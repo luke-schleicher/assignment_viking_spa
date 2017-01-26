@@ -3,11 +3,12 @@ PRODUCTS
   {
     "1": {
       "id": 1,
+      "category": 3
       "name": "big axe",
       "price": 5,
+      "imagePath": "http://placehold.it/264x175",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua.",
-      "category": 3
     }
   }
 
