@@ -40,7 +40,7 @@ VikingStore.factory("productService", ["categoryService",
         price: faker.commerce.price(),
         description: faker.hacker.phrase(),
         category: category.id,
-        quantity: (Math.floor(Math.random * 20))
+        quantity: Math.floor(Math.random() * 20)
       }
       category.addProduct(product);
       _id++;

@@ -7,10 +7,7 @@
   <tr ng-repeat="product in products">
     <td><a ui-sref="products.show({ id: product.id })">{{ product.name }}</a></td>
     <td>
-      <select ng-model="quantity" ng-="">
-        <option ng-repeat="n in [].constructor(0, product.quantity) track by $index"
-                selected="cart[product.id]">{{ $index }}</option>
-      </select>
+      {{ cart[product.id] }}
     </td>
     <td>{{ product.price | currency }}</td>
   </tr>
